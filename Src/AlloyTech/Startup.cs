@@ -5,6 +5,7 @@ using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
 using Optimizely.SixLabors;
+using SixLabors.ImageSharp.Web.DependencyInjection;
 
 namespace AlloyTech;
 
@@ -60,6 +61,7 @@ public class Startup
         app.UseRouting();
         app.UseAuthentication();
         app.UseAuthorization();
+        app.UseImageSharp();
 
         app.UseEndpoints(endpoints =>
         {
